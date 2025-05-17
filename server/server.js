@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express();
 const cors = require("cors");
-const { users } = require("./config/data");
+const users = require("./config/users");
 
 // setup middlewares
 app.use(cors());
