@@ -27,7 +27,10 @@ app.get("/api/zenQuotes", (req, res) => {
 });
 
 app.get('/api/logger', (req, res) => {
-  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  if (ip.includes(',')) {
+    ip = ip.split(',')[0].trim();
+  }
   res.json({ ip });
 });
 
