@@ -4,11 +4,11 @@ A simple Node.js + Express server that serves Zen quotes, product data, user inf
 
 ## Features
 
-- `/api/zen-quotes` - Returns a random zen quote
-- `/api/users` - Returns a list of mock users
-- `/api/products` - Returns a list of mock products
-- `/api/nasa` - Returns NASA Astronomy Picture of the Day
-- `/api/logger` - Logs and returns client IP address
+- [**/api/zen-quotes**](https://kf-web-server.onrender.com/api/zen-quotes) – Returns a random zen quote
+- [**/api/users**](https://kf-web-server.onrender.com/api/users) – Returns a list of mock users
+- [**/api/products**](https://kf-web-server.onrender.com/api/products) – Returns a list of mock products
+- [**/api/nasa?date=YYYY-MM-DD**](https://kf-web-server.onrender.com/api/nasa?date=2025-05-18) – NASA Astronomy Picture of the Day (example date included)
+- [**/api/logger**](https://kf-web-server.onrender.com/api/logger) – Logs and returns client IP address
 
 ## Live Demo
 
