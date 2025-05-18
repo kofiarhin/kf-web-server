@@ -26,6 +26,11 @@ app.get("/api/zenQuotes", (req, res) => {
   res.json(zenQuotes);
 });
 
+app.get('/api/logger', (req, res) => {
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  res.json({ ip });
+});
+
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
