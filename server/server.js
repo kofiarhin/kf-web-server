@@ -3,7 +3,7 @@ const cors = require("cors");
 
 const users = require("./config/users");
 const products = require("./config/products");
-
+const zenQuotes = require("./config/zenQuotes");
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -20,6 +20,10 @@ app.get("/api/users", (req, res) => {
 
 app.get("/api/products", (req, res) => {
   res.json(products);
+});
+
+app.get("/api/zenQuotes", (req, res) => {
+  res.json(zenQuotes);
 });
 
 app.listen(port, () => {
