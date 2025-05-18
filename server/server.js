@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { faker } = require("@faker-js/faker");
-
+const generateFakePosts   = require("./config/fakePosts");
 const users = require("./config/users");
 const products = require("./config/products");
 const zenQuotes = require("./config/zenQuotes");
@@ -60,8 +60,14 @@ app.get("/api/fake-data", (req, res) => {
     avatar: faker.image.avatar(),
   }));
 
+  res.json(app.get("/api/fake-posts", (req, res) => {
+  const count = parseInt(req.query.count) || 5;
+  const data = generateFakePosts(count);
   res.json(data);
 });
+
+
+
 
 // Start server
 app.listen(port, () => {
