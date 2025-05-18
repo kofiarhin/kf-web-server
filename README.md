@@ -1,4 +1,4 @@
-# Zen Quotes API
+# Alpha API
 
 A simple Node.js + Express server that serves Zen quotes, product data, user info, and integrates with external APIs like NASA and OpenAI.
 
@@ -13,9 +13,7 @@ A simple Node.js + Express server that serves Zen quotes, product data, user inf
 ## Live Demo
 
 Check it out here:  
-[**Live Demo on Render / Vercel / YourHost**](https://your-live-demo-link.com)
-
-*(Replace the above with your actual deployed URL)*
+[**Live Demo**](https://kf-web-server.onrender.com/)
 
 ## Getting Started
 
