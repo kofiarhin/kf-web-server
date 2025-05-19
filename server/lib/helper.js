@@ -1,6 +1,6 @@
 const { faker } = require("@faker-js/faker");
 
-function generateFakePosts(count = 5) {
+function generateFakePosts(count = 10) {
   return Array.from({ length: count }, () => ({
     id: faker.string.uuid(),
     title: faker.lorem.sentence({ min: 3, max: 8 }),
@@ -19,7 +19,7 @@ function generateFakePosts(count = 5) {
   }));
 }
 
-function generateFakeUsers(count = 10) {
+function generateFakeUsers(count = 20) {
   return Array.from({ length: count }, () => ({
     id: faker.string.uuid(),
     name: faker.person.fullName(),
@@ -36,7 +36,16 @@ function generateFakeUsers(count = 10) {
   }));
 }
 
+const generateFakeProducts = (count = 10) =>
+  Array.from({ length: count }, () => ({
+    name: faker.commerce.productName(),
+    price: parseFloat(faker.commerce.price({ min: 10, max: 1000 })),
+    description: faker.commerce.productDescription(),
+    stock: faker.number.int({ min: 0, max: 500 }),
+  }));
+
 module.exports = {
   generateFakePosts,
   generateFakeUsers,
+  generateFakeProducts,
 };
