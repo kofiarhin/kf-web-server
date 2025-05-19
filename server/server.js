@@ -1,10 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const { faker } = require("@faker-js/faker");
-const generateFakePosts   = require("./config/fakePosts");
 const users = require("./config/users");
 const products = require("./config/products");
 const zenQuotes = require("./config/zenQuotes");
+const generateFakePosts = require("./config/fakePosts");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -41,33 +41,11 @@ app.get("/api/logger", (req, res) => {
   res.json({ ip });
 });
 
-// Dynamic fake data (fresh on each request)
-app.get("/api/fake-data", (req, res) => {
-  const count = parseInt(req.query.count) || 5;
+app.get("/api/fake-posts", async (req, res) => {
+  const data = generateFakePosts(10);
 
-  const data = Array.from({ length: count }, () => ({
-    id: faker.string.uuid(),
-    name: faker.person.fullName(),
-    email: faker.internet.email(),
-    phone: faker.phone.number(),
-    address: {
-      street: faker.location.streetAddress(),
-      city: faker.location.city(),
-      country: faker.location.country(),
-    },
-    job: faker.person.jobTitle(),
-    company: faker.company.name(),
-    avatar: faker.image.avatar(),
-  }));
-
-  res.json(app.get("/api/fake-posts", (req, res) => {
-  const count = parseInt(req.query.count) || 5;
-  const data = generateFakePosts(count);
-  res.json(data);
+  return res.json(data);
 });
-
-
-
 
 // Start server
 app.listen(port, () => {
