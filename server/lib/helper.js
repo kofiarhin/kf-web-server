@@ -19,6 +19,24 @@ function generateFakePosts(count = 5) {
   }));
 }
 
+function generateFakeUsers(count = 10) {
+  return Array.from({ length: count }, () => ({
+    id: faker.string.uuid(),
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
+    phone: faker.phone.number(), // Still valid in v8
+    address: {
+      street: faker.location.streetAddress(),
+      city: faker.location.city(),
+      country: faker.location.country(),
+    },
+    company: faker.company.name(),
+    jobTitle: faker.person.jobTitle(),
+    avatar: faker.image.avatar(),
+  }));
+}
+
 module.exports = {
   generateFakePosts,
+  generateFakeUsers,
 };
