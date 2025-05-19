@@ -6,8 +6,9 @@ A simple Node.js + Express server that serves Zen quotes, product data, user inf
 
 -
 - [**/api/logger**](https://kf-web-server.onrender.com/api/logger) – Logs and returns client IP address
-- [**/api/fake-products**](https://kf-web-server.onrender.com/api/fake-posts) – returns list of fake products
+- [**/api/fake-posts**](https://kf-web-server.onrender.com/api/fake-posts) – returns list of fake posts
 - [**/api/users**](https://kf-web-server.onrender.com/api/users) – returns list of fake users
+- [**/api/products**](https://kf-web-server.onrender.com/api/products) – returns list of fake products
 
 ## Live Demo
 
