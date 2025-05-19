@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Root route
 app.get("/", (req, res) => {
-  res.json({ message: "hello world" });
+  res.json({ message: "Welcome to my simple api" });
 });
 
 // Static fake users from config
