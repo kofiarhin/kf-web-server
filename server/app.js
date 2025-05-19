@@ -8,6 +8,7 @@ const { getPosts } = require("./controllers/postsController");
 const { getZenQuotes } = require("./controllers/zenController");
 const { getLogger } = require("./controllers/loggerController");
 const homeController = require("./controllers/homeController");
+const { getImages } = require("./controllers/imagesController");
 
 const app = express();
 
@@ -30,5 +31,6 @@ app.get("/api/zenQuotes", getZenQuotes);
 
 // Get IP address of the client
 app.get("/api/logger", getLogger);
+app.get("/api/images", getImages);
 
 module.exports = app;

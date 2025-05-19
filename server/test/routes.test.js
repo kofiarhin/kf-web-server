@@ -37,4 +37,10 @@ describe("genereal test", () => {
     expect(statusCode).toBe(200);
     expect(body.length).toBeGreaterThan(0);
   });
+
+  it("should test for fake posts", async () => {
+    const { body, statusCode } = await request(app).get("/api/images");
+    expect(statusCode).toBe(200);
+    expect(body.length).toBeGreaterThan(0);
+  });
 });
