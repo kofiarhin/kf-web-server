@@ -9,6 +9,7 @@ A simple Node.js + Express server that serves Zen quotes, product data, user inf
 - [**/api/fake-posts**](https://kf-web-server.onrender.com/api/fake-posts) – returns list of fake posts
 - [**/api/users**](https://kf-web-server.onrender.com/api/users) – returns list of fake users
 - [**/api/products**](https://kf-web-server.onrender.com/api/products) – returns list of fake products
+- [**/api/zenQuotes**](https://kf-web-server.onrender.com/api/zenQuotes) – returns list of zen quotes
 
 ## Live Demo
 
